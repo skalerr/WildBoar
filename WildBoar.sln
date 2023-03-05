@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WildBoar", "WildBoar\WildBoar.csproj", "{D88F710A-36D8-4687-8314-8776F10B871C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{14C7CB20-61F8-48C4-ABD9-55A78FEB622E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{66E0B79A-CCAE-4092-B7D5-90136579F8D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{D88F710A-36D8-4687-8314-8776F10B871C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D88F710A-36D8-4687-8314-8776F10B871C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D88F710A-36D8-4687-8314-8776F10B871C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14C7CB20-61F8-48C4-ABD9-55A78FEB622E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C7CB20-61F8-48C4-ABD9-55A78FEB622E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C7CB20-61F8-48C4-ABD9-55A78FEB622E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C7CB20-61F8-48C4-ABD9-55A78FEB622E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66E0B79A-CCAE-4092-B7D5-90136579F8D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66E0B79A-CCAE-4092-B7D5-90136579F8D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66E0B79A-CCAE-4092-B7D5-90136579F8D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66E0B79A-CCAE-4092-B7D5-90136579F8D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
