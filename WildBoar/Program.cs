@@ -7,6 +7,8 @@ using Autofac.Core.Registration;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
+using WildBoar.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 var containerBuilder = new ContainerBuilder();
@@ -15,6 +17,7 @@ var containerBuilder = new ContainerBuilder();
 builder.Services.AddControllersWithViews();
 
 containerBuilder.RegisterModule<DALModule>();
+
 var container = containerBuilder.Build();
 foreach (var registration in container.ComponentRegistry.Registrations)
 {
@@ -23,7 +26,10 @@ foreach (var registration in container.ComponentRegistry.Registrations)
 
 
 builder.Services.AddSingleton(container);
-
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+});
 
 var app = builder.Build();
 
@@ -43,6 +49,12 @@ using (var scope = app.Services.CreateScope())
         Console.WriteLine(registration.ToString());
     }
 }
+
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+});
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
