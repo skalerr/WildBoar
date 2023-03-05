@@ -1,6 +1,8 @@
-﻿namespace WildBoar.Models;
+using DAL.Implementations;
 
-public class Client : BaseEntity
+namespace Domain.Entities;
+
+public class Product : ProductEntity
 {
     public string Name { get; set; }
     public string Email { get; set; }
@@ -8,5 +10,4 @@ public class Client : BaseEntity
     public string Address { get; set; }
     public string Phone { get; set; }
     public string Role { get; set; }
-    public List<ShoppingCart> ShoppingCart { get; set; }
 }

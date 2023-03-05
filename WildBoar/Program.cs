@@ -1,7 +1,15 @@
+using DAL;
+using Autofac;
+using Autofac.Core;
+using System.ComponentModel;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.RegisterModule<DALModule>();
+
 
 var app = builder.Build();
 
