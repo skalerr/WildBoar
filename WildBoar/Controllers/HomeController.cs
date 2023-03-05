@@ -1,15 +1,21 @@
 ﻿using System.Diagnostics;
+using DAL.EntityFramework;
+using DAL.Implementations;
+using DAL.Repositories.Interface;
 using Microsoft.AspNetCore.Mvc;
+using WildBoar.Models;
 
 namespace WildBoar.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
     
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(IRepository<ProductEntity> repository)
     {
-        _logger = logger;
     }
-    
+
+
+    public void eftest()
+    {
+    }
 }

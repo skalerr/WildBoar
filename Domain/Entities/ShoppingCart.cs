@@ -4,7 +4,7 @@ namespace Domain.Entities;
 
 public class ShoppingCart : ShoppingCartEntity
 {
-    public ShoppingCart(List<ProductEntity> product, Client client)
+    public ShoppingCart(List<Product> product, Client client)
     {
         Client = client;
         Product = product;
