@@ -7,16 +7,7 @@ namespace WildBoar.Models;
 public class ClientEntity : BaseEntity<long>, IAuditable
 {
     
-    public string FullName
-    {
-        get
-        {
-            if(LastName == null || FirstName == null || Patronymic == null)
-                throw new ArgumentException("Поля ФИО не могут быть пустыми!");
-            
-            return $"{LastName} {FirstName} {Patronymic}";
-        }
-    }
+    public string FullName { get; set; }
     public string? FirstName { get; set; }
     public string? LastName { get; set; }
     public string? Patronymic { get; set; }

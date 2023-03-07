@@ -9,13 +9,5 @@ namespace WildBoar.Controllers;
 
 public class HomeController : Controller
 {
-    
-    public HomeController(IRepository<ProductEntity> repository)
-    {
-    }
 
-
-    public void eftest()
-    {
-    }
 }

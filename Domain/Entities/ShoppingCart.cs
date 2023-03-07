@@ -1,9 +1,9 @@
-﻿using DAL.Implementations;
+﻿namespace Domain.Entities;
 
-namespace Domain.Entities;
-
-public class ShoppingCart : ShoppingCartEntity
+public class ShoppingCart 
 {
+    public Client Client { get; set; }
+    public List<Product> Product { get; set; }
     public ShoppingCart(List<Product> product, Client client)
     {
         Client = client;

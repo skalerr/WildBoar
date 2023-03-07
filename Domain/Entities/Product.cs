@@ -1,10 +1,11 @@
-using DAL.Implementations;
-
 namespace Domain.Entities;
 
-public class Product : ProductEntity
+public class Product
 {
-    public Product(string name, decimal price, ProductEntityCategory category)
+    public string Name { get; set; }
+    public decimal Price { get; set; }
+    public Product Category { get;  set; }
+    public Product(string name, decimal price, Product category)
     {
         Name = name;
         Price = price;
