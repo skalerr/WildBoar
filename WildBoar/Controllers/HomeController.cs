@@ -1,21 +1,13 @@
-﻿using System.Diagnostics;
-using DAL.EntityFramework;
-using DAL.Implementations;
-using DAL.Repositories.Interface;
+﻿
 using Microsoft.AspNetCore.Mvc;
-using WildBoar.Models;
 
 namespace WildBoar.Controllers;
 
-public class HomeController : Controller
+[ApiController]
+public class HomeController : ControllerBase
 {
-    
-    public HomeController(IRepository<ProductEntity> repository)
+    public IActionResult Index()
     {
-    }
-
-
-    public void eftest()
-    {
+        return Ok("Hello World!");
     }
 }

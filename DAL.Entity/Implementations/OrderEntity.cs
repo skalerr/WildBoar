@@ -1,4 +1,5 @@
-﻿using DAL.Interfaces;
+﻿using DAL.Enums;
+using DAL.Interfaces;
 using Domain.Entites.BaseEntity;
 using WildBoar.Models;
 
@@ -15,10 +16,4 @@ public class OrderEntity : BaseEntity<long>, IAuditable
     public DateTime? DeleteDate { get; set; }
     public DateTime CreateDate { get; set; }
     public DateTime? UpdateDate { get; set; }
-}
-public enum Status
-{
-    Active,
-    Сlose,
-    Сancel
 }

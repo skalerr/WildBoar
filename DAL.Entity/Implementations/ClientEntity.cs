@@ -1,4 +1,5 @@
-﻿using DAL.Implementations;
+﻿using DAL.Enums;
+using DAL.Implementations;
 using DAL.Interfaces;
 using Domain.Entites.BaseEntity;
 
@@ -34,9 +35,4 @@ public class ClientEntity : BaseEntity<long>, IAuditable
     public DateTime? DeleteDate { get; set; }
     
 
-}
-public enum Role
-{
-    Active,
-    Passive,
 }

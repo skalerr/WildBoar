@@ -1,4 +1,5 @@
-﻿using WildBoar.Models;
+﻿using DAL.Enums;
+using WildBoar.Models;
 
 namespace Domain.Entities;
 
