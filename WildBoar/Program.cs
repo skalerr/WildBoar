@@ -3,12 +3,17 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using WildBoar.Controllers;
 
+var client = new ClientEntity();
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
 });
+
+builder.Services.AddDbContext<AppEfContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("WildBoarContext")));
 
 var app = builder.Build();
 
